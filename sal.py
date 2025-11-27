@@ -1,9 +1,12 @@
-# salary_bonus.py
+ import sys
 
-salary = float(input("Enter employee salary: "))
+if len(sys.argv) != 2:
+    print("Usage: python salary_bonus.py <salary>")
+    sys.exit()
 
+salary = float(sys.argv[1])
 bonus = salary * 0.10
-total_salary = salary + bonus
+total = salary + bonus
 
-print(f"Bonus Amount: {bonus}")
-print(f"Total Salary after Bonus: {total_salary}")
+print("Bonus Amount:", bonus)
+print("Total Salary:", total)
