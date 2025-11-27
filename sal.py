@@ -1,12 +1,13 @@
- import sys
+import sys
 
-if len(sys.argv) != 2:
-    print("Usage: python salary_bonus.py <salary>")
-    sys.exit()
+if len(sys.argv) >= 3:
+  script_name = sys.argv[0]
+  salary = sys.argv[1]
+else:
+  script_name = sys.argv[0]
+  salary = 15000
 
-salary = float(sys.argv[1])
-bonus = salary * 0.10
-total = salary + bonus
-
-print("Bonus Amount:", bonus)
-print("Total Salary:", total)
+bamount=salary*0.10
+bonus=salary+bamount
+print("Bonus amount:",bamount)
+print("total Amount:",bonus)
